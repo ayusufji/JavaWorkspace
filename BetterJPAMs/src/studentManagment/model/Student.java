@@ -27,15 +27,17 @@ public class Student
 	 * @param gradeLevel Student's Grade Level
 	 * @param idNumber
 	 * @param gender
+	 * @param name 
 	 * @param age
 	 * @param gpa
 	 */
-	public Student(boolean isCurrentStudent, int gradeLevel, String idNumber, String gender, int age, double gpa)
+	public Student(boolean isCurrentStudent, int gradeLevel, String idNumber, String gender, String name, int age, double gpa)
 	{
 		this.isCurrentStudent = isCurrentStudent;
 		this.gradeLevel = gradeLevel;
 		this.idNumber = idNumber;
 		this.gender = gender;
+		this.name = name;
 		this.age = age;
 		this.gpa = gpa;
 	}
