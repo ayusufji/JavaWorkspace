@@ -15,7 +15,7 @@ public class Team
 		winningRecord = false;
 	}
 	
-	public Team(String teamName, double avgPPG, int numberOfPlayers, boolean winningRecord);
+	public Team(String teamName, double avgPPG, int numberOfPlayers, boolean winningRecord)
 	{
 		this.teamName = teamName;
 		this.avgPPG = avgPPG;
@@ -26,12 +26,12 @@ public class Team
 	public String toString()
 	{
 		String str = "This team does not exist.";
-		if (teamName!= "")
+		if (teamName != "")
 		{
-		String str = teamName + "has " + numberOfPlayers + " and is scoring"+ avgPPG + "points per game."  + "Winning Record: ";
+		str = teamName + " has " + numberOfPlayers + " players " + "and is scoring "+ avgPPG + " points per game."  + " Winning Record: ";
 		if (winningRecord)
 			{
-			 str = str + "They are winning";
+			 str = str + "They are winning.";
 			}
 			else
 			{
@@ -39,10 +39,5 @@ public class Team
 			}
 		}
 		return str;
-	}
-		
-	
-	
-	
-	
+	}	
 }
