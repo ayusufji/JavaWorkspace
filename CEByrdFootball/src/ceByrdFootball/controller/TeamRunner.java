@@ -7,6 +7,7 @@ public class TeamRunner {
 	{
 		Team myTeam = new Team("CeByrd", 24.5, 124, true);
 		Team csTeam = new Team("Captain Shreve", 20, 100, false);
+		
 		System.out.println(myTeam);
 		System.out.println(csTeam);
 	}

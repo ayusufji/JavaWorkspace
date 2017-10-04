@@ -25,10 +25,10 @@ public class Player extends Team
 	
 	public String toString()
 	{
-		String str = "This team does not exist.";
+		String str = "This player does not exist.";
 		if (name != "")
 		{
-		str = name + " has " + number + " players " + "and is scoring "+ height + " points per game."  + " Winning Record: ";
+		str = name + " is number " + number +  "and is "+ height + " tall."  + " Start: ";
 		if (start)
 			{
 			 str = str + "They are starting.";
@@ -42,4 +42,4 @@ public class Player extends Team
 	}	
 }
 
-}
+
