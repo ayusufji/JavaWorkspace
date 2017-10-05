@@ -2,8 +2,10 @@
 
 public class CrapsGame
 {
-  private int point = 0;
-  private int result = 0;
+ private int point = 0;
+ private int result = 0;
+ 
+ 
 
   /**
    *  Calculates the result of the next dice roll in the Craps game.
@@ -16,22 +18,50 @@ public class CrapsGame
   public int processRoll(int total)
   {
 
-    __________________________________________
+	  if (point == 0)
+	  {
+		  if (total == 7 || total == 11)
+	    	{
+	    		result = 1;
+	    		point = 0;
+	    	}
+	    	else if (total == 2 || total == 3 || total == 12)
+	    	{
+	    		result = -1;
+	    		point = 0;
+	    	}   	
+	    	else
+	    	{
+	    		point = total;
+	    		result = 0;
+	    	}
+	   }
+	  else
+	  	{
+	  		result = 0;
+	  		if (total == 7)
+	  		{
+	  			result = -1;
+	  			point = 0;
+	  		}
+	  		else if (point == total)
+	  		{
+	  			result = 1;
+	  			point = 0;
+	  		}
+	  		
+	  		else
+	  		{
+	  			result = 0;	
+	  			point = total;
+	  		}
+	  	
+	 
+	  	}
+	
+    	
     
-    if (point == 0)
-    {
-    	if (point == 7 || point == 11)
-    	{
-    		result = 1;
-    		point = 0;
-    	}
-    	else if (point == 2 || point == 3 || point == 12)
-    	{
-    		result = -1;
-    		point = 0;
-    	}
-    }
-    ...
+    
 
     return result;
   }
