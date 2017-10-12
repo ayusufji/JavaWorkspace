@@ -5,8 +5,8 @@ import java.awt.Color;
 
 public class RollingDie extends Die
 {
-  private static final double slowdown = 0.97,
-                              speedFactor = 0.04,
+  private static final double slowdown = 0.5,
+                              speedFactor = 0.2,
                               speedLimit = 2.0;
 
   private static int tableLeft, tableRight, tableTop, tableBottom;
@@ -162,9 +162,39 @@ public class RollingDie extends Die
       case 1:
         g.fillOval(x2, y2, dotSize, dotSize);
         break;
+      case 2:
+    	  g.fillOval(x1, y1, dotSize, dotSize);
+    	  g.fillOval(x3, y3, dotSize, dotSize);
+    	  break;
+      case 3:
+    	  g.fillOval(x1, y1, dotSize, dotSize);
+    	  g.fillOval(x2, y2, dotSize, dotSize);
+    	  g.fillOval(x3, y3, dotSize, dotSize);
+    	  break;
+      case 4:
+    	  g.fillOval(x1, y1, dotSize, dotSize);
+    	  g.fillOval(x1, y3, dotSize, dotSize);
+    	  g.fillOval(x3, y1, dotSize, dotSize);
+    	  g.fillOval(x3, y3, dotSize, dotSize);
+    	  break;
+      case 5:
+    	  g.fillOval(x1, y1, dotSize, dotSize);
+    	  g.fillOval(x1, y3, dotSize, dotSize);
+    	  g.fillOval(x2, y2, dotSize, dotSize);
+    	  g.fillOval(x3, y1, dotSize, dotSize);
+    	  g.fillOval(x3, y3, dotSize, dotSize);
+    	  break;
+      case 6:
+    	  g.fillOval(x1, y1, dotSize, dotSize);
+    	  g.fillOval(x1, y3, dotSize, dotSize);
+    	  g.fillOval(x1, y2, dotSize, dotSize);
+    	  g.fillOval(x3, y2, dotSize, dotSize);
+    	  g.fillOval(x3, y3, dotSize, dotSize);
+    	  g.fillOval(x3, y1, dotSize, dotSize);
+    	  break;
 
-      ________________________________________
-      ...
+
+
 
     }
   }
