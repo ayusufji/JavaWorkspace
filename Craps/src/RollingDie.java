@@ -5,13 +5,13 @@ import java.awt.Color;
 
 public class RollingDie extends Die
 {
-  private static final double slowdown = 0.5,
-                              speedFactor = 0.2,
-                              speedLimit = 2.0;
+  private static final double slowdown = .97, //.97
+                              speedFactor = 0.50, //.04
+                              speedLimit = 2.0; //2.0
 
   private static int tableLeft, tableRight, tableTop, tableBottom;
 
-  private final int dieSize = 24;
+  private final int dieSize = 50; //24
   private int xCenter, yCenter;
   private double xSpeed, ySpeed;
 
