@@ -4,6 +4,49 @@ import java.util.Scanner;
 
 public class MyMath
 {
+	
+	public static String perfectNumbers(int n)
+	{
+		int count = 3;
+		String result = "The first " + n + " perfect numbers are: ";
+		while (count>n)
+		{
+			if (MyMath.isPerfect(n) == true)
+					{
+						result =  result + n + " ";
+						count++;
+					}
+		}
+		
+			
+			
+			return result;
+	}
+	
+	public static boolean isPerfect(int n)
+		{
+			boolean result = false;
+			int sum = 0;
+			for (int k = 1; k<n; k++)
+			{
+				if (n % k == 0)
+				{
+					
+					sum += k;
+				}
+			}
+			if (sum == n)
+			{
+				result = true;
+			}
+			return result;
+			
+			
+		}
+	
+	
+	
+	
   /**
    * Returns the sum of all integers from 1 to n, if n >= 1,
    * and 0 otherwise.
@@ -101,6 +144,8 @@ public class MyMath
         System.out.print(k + " ");
     System.out.println();
     System.out.println("Goldbach conjecture up to " + n + ": " + testGoldbach(n));
+    
+   System.out.println(perfectNumbers(4));
   }
 }
 
